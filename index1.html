@@ -60,9 +60,10 @@
         let parent = document.getElementById("box");
         parent.innerHTML = "";
         for (let i = 0; i < filterProducts.length; i++) {
-          parent.innerHTML += `     <div class="card d-flex flex-wrap  col-12 col-sm-6 col-md-4">
+          parent.innerHTML +=`<div class="container">
+            <div class="row  col-12 col-sm-6 col-md-4 g-3">
+              <div class="card d-flex ">
       <div class="card-body">
-      
       <h5 class="card-title  border-bottom border-danger mb-3 text-center p-2">${filterProducts[i].title}</h5>
         <span class="border border-info  rounded mb-2 text-center"
           >${filterProducts[i].id}</span
@@ -93,7 +94,10 @@
           </button>
         </div>
       </div>
-    </div>`;
+    </div> 
+              </div>
+            </div>
+          `;
         }
       }
 
