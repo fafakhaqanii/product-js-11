@@ -15,9 +15,9 @@
         box-sizing: border-box;
       }
 
-      .item {
+      /* .item {
         border: 1px solid red;
-      }
+      } */
       span {
         display: block;
         transition: 0.5s;
@@ -44,9 +44,12 @@
         placeholder="Max price"
       />
     </div>
-    <div id="box"></div>
-    <ul id="cart"></ul>
-
+    <div class="container">
+      <div class="row">
+        <div id="box"></div>
+        <ul id="cart"></ul>
+      </div>
+    </div>
     <script>
       let cart = [];
       let products = [
@@ -60,7 +63,8 @@
         let parent = document.getElementById("box");
         parent.innerHTML = "";
         for (let i = 0; i < filterProducts.length; i++) {
-          parent.innerHTML +=`<div class="container">
+          parent.innerHTML += `
+          <div class="container">
             <div class="row  col-12 col-sm-6 col-md-4 g-3">
               <div class="card d-flex ">
       <div class="card-body">
@@ -85,7 +89,7 @@
             add
           </button>
         
-          <span data-count-id="${filterProducts[i].id} border border-dark">0</span>
+          <span data-count-id="${filterProducts[i].id}" class="border border-dark rounded ps-3 pe-3">0</span>
           <button
             onclick="minusFromCart(${filterProducts[i].id})"
             class="btn btn-outline-danger pt-0 pb-0"
