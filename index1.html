@@ -26,29 +26,40 @@
         background-color: lightgreen;
         color: white;
       }
+      #cart {
+        padding: 10px;
+        border-radius: 10px;
+        list-style-type: none;
+        margin-left: 95px;
+        margin-top: 10px;
+        display: inline-block;
+        background-color: lightblue;
+      }
     </style>
   </head>
 
   <body>
-    <div class="d-flex justify-content-around m-3 col-12 col-sm-6 col-md-4">
-      <input
-        type="text"
-        id="min"
-        onkeyup="updateBox()"
-        placeholder="Min price"
-      />
-      <input
-        type="text"
-        id="max"
-        onkeyup="updateBox()"
-        placeholder="Max price"
-      />
-    </div>
     <div class="container">
       <div class="row">
-        <div id="box"></div>
-        <ul id="cart"></ul>
+        <div class="d-flex justify-content-between col-12 col-sm-6 col-md-4">
+          <input
+            type="text"
+            id="min"
+            onkeyup="updateBox()"
+            placeholder="Min price"
+          />
+          <input
+            type="text"
+            id="max"
+            onkeyup="updateBox()"
+            placeholder="Max price"
+          />
+        </div>
       </div>
+    </div>
+    <div>
+      <div id="box"></div>
+      <ul id="cart"></ul>
     </div>
     <script>
       let cart = [];
